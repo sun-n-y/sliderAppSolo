@@ -90,3 +90,9 @@ main {
     opacity: 1;
     font-size: 1.5rem;
 }
+
+.react-slider .quote {
+    max-width: 900px;
+    margin: 0 auto;
+
+}

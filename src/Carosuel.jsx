@@ -29,14 +29,14 @@ const Carosuel = () => {
     });
   };
 
-  //   useEffect(() => {
-  //     const id = setInterval(() => {
-  //       nextSlide();
-  //     }, 3000);
-  //     return () => {
-  //       clearInterval(id);
-  //     };
-  //   }, [currentIndex]);
+  useEffect(() => {
+    const id = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => {
+      clearInterval(id);
+    };
+  }, [currentIndex]);
 
   return (
     <div className="slider-container">
