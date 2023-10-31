@@ -1,5 +1,11 @@
+import Carosuel from './Carosuel';
+
 function App() {
-  return <h1>y</h1>;
+  return (
+    <main>
+      <Carosuel />
+    </main>
+  );
 }
 
 export default App;
