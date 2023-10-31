@@ -72,3 +72,21 @@ main {
 .next {
     right: 0;
 }
+
+/* react slick css ======================================= */
+
+.react-slider {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.slick-slide img {
+    display: inline-block;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: rebeccapurple;
+    opacity: 1;
+    font-size: 1.5rem;
+}
