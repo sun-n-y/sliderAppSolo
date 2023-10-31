@@ -14,10 +14,11 @@ const Carosuel = () => {
         const { id, image, name, quote, title } = person;
         return (
           <div className="slide" key={id}>
-            <img src={image} alt={name} />
+            <img src={image} alt={name} className="person-img" />
             <h2 className="name">{name}</h2>
             <h3 className="title">{title}</h3>
             <p className="quote">{quote}</p>
+            <FaQuoteRight className="quote-icon" />
           </div>
         );
       })}
@@ -27,7 +28,6 @@ const Carosuel = () => {
       <button type="button" className="next">
         <FaChevronCircleRight />
       </button>
-      <FaQuoteRight />
     </div>
   );
 };
