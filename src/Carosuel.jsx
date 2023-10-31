@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { list, shortList } from './data';
+import { useEffect, useState } from 'react';
+import { list, longList, shortList } from './data';
 import {
   FaChevronCircleLeft,
   FaChevronCircleRight,
@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 
 const Carosuel = () => {
-  const [people, setPeople] = useState(list);
+  const [people, setPeople] = useState(longList);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -28,6 +28,15 @@ const Carosuel = () => {
       return newIndex;
     });
   };
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => {
+      clearInterval(id);
+    };
+  }, [currentIndex]);
 
   return (
     <div className="slider-container">
